@@ -174,27 +174,33 @@
     font-size: 1.8rem;
   }
 
+  .modal-overlay {
+    padding: 16px 12px;
+    align-items: flex-start;
+  }
+
   .modal-card {
-    padding: 28px 18px 24px;
+    padding: 24px 16px 22px;
     border-radius: 16px;
-    max-height: 88vh;
-    max-height: 88dvh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    margin: auto 0;
   }
 
   .unspoken-modal-img-wrap {
-    max-height: 260px;
-    max-width: 260px;
+    max-height: 220px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 14px;
   }
 
   .unspoken-modal-img {
-    max-height: 260px;
+    max-height: 220px;
+    width: auto;
+    object-fit: contain;
   }
 
   .unspoken-modal-text {
-    font-size: 1.15rem;
-    line-height: 1.75;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
 
   .btn-cinematic {
@@ -268,21 +274,31 @@
     font-size: 1.6rem;
   }
 
+  .modal-overlay {
+    padding: 12px 8px;
+  }
+
   .modal-card {
-    padding: 24px 14px 20px;
+    padding: 22px 14px 18px;
+    margin: auto 0;
   }
 
   .unspoken-modal-img-wrap {
-    max-height: 220px;
-    max-width: 220px;
+    max-height: 190px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 12px;
   }
 
   .unspoken-modal-img {
-    max-height: 220px;
+    max-height: 190px;
+    width: auto;
+    object-fit: contain;
   }
 
   .unspoken-modal-text {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
+    line-height: 1.65;
   }
 }
 

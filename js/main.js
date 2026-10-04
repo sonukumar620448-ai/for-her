@@ -137,7 +137,10 @@ class StoryExperience {
       };
     }
 
-    if (this.modal) this.modal.classList.add('open');
+    if (this.modal) {
+      this.modal.classList.add('open');
+      this.modal.scrollTop = 0;
+    }
   }
 
   renderReasons() {
@@ -195,7 +198,10 @@ class StoryExperience {
       };
     }
 
-    if (this.modal) this.modal.classList.add('open');
+    if (this.modal) {
+      this.modal.classList.add('open');
+      this.modal.scrollTop = 0;
+    }
   }
 
   renderMainLetter() {
