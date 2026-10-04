@@ -175,8 +175,26 @@
   }
 
   .modal-card {
-    padding: 30px 20px;
+    padding: 28px 18px 24px;
     border-radius: 16px;
+    max-height: 88vh;
+    max-height: 88dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .unspoken-modal-img-wrap {
+    max-height: 260px;
+    max-width: 260px;
+  }
+
+  .unspoken-modal-img {
+    max-height: 260px;
+  }
+
+  .unspoken-modal-text {
+    font-size: 1.15rem;
+    line-height: 1.75;
   }
 
   .btn-cinematic {
@@ -187,12 +205,95 @@
   }
 }
 
+/* ── Extra Small Phones (iPhone SE, Galaxy, compact screens <= 480px) ── */
+@media (max-width: 480px) {
+  .story-scene {
+    padding: 65px 12px 65px;
+  }
+
+  .cute-bday-card {
+    padding: 18px 12px 20px;
+    border-radius: 18px;
+  }
+
+  .cute-hbd-badge {
+    font-size: 1.4rem;
+    gap: 6px;
+  }
+
+  .cute-whisper {
+    font-size: 1.25rem;
+  }
+
+  .cute-click-me-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .scene-heading {
+    font-size: 2.1rem;
+  }
+
+  .rope-photo-card {
+    width: 195px;
+  }
+
+  .photo-frame img {
+    height: 235px;
+  }
+
+  .countdown-clock {
+    gap: 6px;
+  }
+
+  .clock-unit {
+    min-width: 58px;
+    padding: 10px 8px;
+  }
+
+  .clock-number {
+    font-size: 1.6rem;
+  }
+
+  .clock-label {
+    font-size: 0.65rem;
+  }
+
+  .parchment-letter-wrapper {
+    padding: 32px 16px;
+    font-size: 1.02rem;
+  }
+
+  .letter-sign-name {
+    font-size: 1.6rem;
+  }
+
+  .modal-card {
+    padding: 24px 14px 20px;
+  }
+
+  .unspoken-modal-img-wrap {
+    max-height: 220px;
+    max-width: 220px;
+  }
+
+  .unspoken-modal-img {
+    max-height: 220px;
+  }
+
+  .unspoken-modal-text {
+    font-size: 1.05rem;
+  }
+}
+
 /* Safe area insets for iPhone notches and gesture bars */
 @supports (padding: max(0px)) {
   .top-bar {
     padding-top: max(0px, env(safe-area-inset-top));
   }
   .story-scene {
+    min-height: 100vh;
+    min-height: 100dvh;
     padding-bottom: max(70px, env(safe-area-inset-bottom) + 50px);
   }
 }
