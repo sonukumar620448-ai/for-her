@@ -1,0 +1,198 @@
+/* ==========================================================================
+   📱 MOBILE-FIRST & RESPONSIVE ADAPTATIONS
+   Optimized for hand-held phones, portrait viewing, touch targets & notches
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 0 16px;
+    height: 52px;
+  }
+
+  .brand-monogram {
+    font-size: 1rem;
+  }
+
+  .music-toggle-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .story-scene {
+    padding: 70px 16px 70px;
+    min-height: 100vh;
+  }
+
+  .cute-bday-card {
+    padding: 20px 14px 22px;
+    border-radius: 20px;
+  }
+
+  .cute-hbd-badge {
+    font-size: 1.6rem;
+    gap: 6px;
+  }
+
+  .cute-whisper {
+    font-size: 1.45rem;
+  }
+
+  .cute-btn-row {
+    margin-top: -18px;
+    margin-right: 6px;
+  }
+
+  .cute-click-me-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .distance-map-container {
+    padding: 0 12px;
+    height: 180px;
+  }
+
+  .distance-prose-card {
+    padding: 24px 20px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .rope-memories-wrapper {
+    padding: 20px 4px;
+  }
+
+  .rope-photos-container {
+    gap: 42px;
+  }
+
+  .rope-photo-card {
+    width: 220px;
+  }
+
+  .rope-photo-card.zigzag-left {
+    margin-left: 10px;
+  }
+
+  .rope-photo-card.zigzag-right {
+    margin-right: 10px;
+  }
+
+  .photo-frame img {
+    height: 260px;
+  }
+
+  .lightbox-prev-btn {
+    left: 12px;
+    top: auto;
+    bottom: 24px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-next-btn {
+    right: 12px;
+    top: auto;
+    bottom: 24px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-close-btn {
+    top: -40px;
+    right: 8px;
+  }
+
+  .envelopes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .envelope-item {
+    padding: 24px 20px;
+  }
+
+  .timeline-path-container {
+    padding-left: 28px;
+  }
+
+  .timeline-line {
+    left: 8px;
+  }
+
+  .timeline-marker {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-card {
+    padding: 20px 16px;
+  }
+
+  .floating-reasons-cloud {
+    gap: 10px;
+  }
+
+  .reason-pill {
+    padding: 10px 20px;
+    font-size: 0.98rem;
+  }
+
+  .realistic-moon {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 28px;
+  }
+
+  .countdown-clock {
+    gap: 10px;
+  }
+
+  .clock-unit {
+    padding: 12px 14px;
+    min-width: 65px;
+  }
+
+  .parchment-letter-wrapper {
+    padding: 40px 24px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .letter-wax-seal {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    right: 20px;
+    font-size: 1rem;
+  }
+
+  .letter-sign-name {
+    font-size: 1.8rem;
+  }
+
+  .modal-card {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .btn-cinematic {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Safe area insets for iPhone notches and gesture bars */
+@supports (padding: max(0px)) {
+  .top-bar {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+  .story-scene {
+    padding-bottom: max(70px, env(safe-area-inset-bottom) + 50px);
+  }
+}

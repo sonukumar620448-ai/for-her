@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>A Story For You 🤍 | Happy Birthday Anu</title>
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Caveat, Plus Jakarta Sans, DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤍</text></svg>">
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Celestial Canvas -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Film Grain & Atmosphere -->
+  <div class="film-grain"></div>
+  <div class="vignette-overlay"></div>
+
+  <!-- Top Floating Controls & Progress -->
+  <header class="top-bar">
+    <div class="top-progress-container">
+      <div class="top-progress-bar" id="top-progress-bar"></div>
+    </div>
+
+    <div class="brand-monogram">
+      <span>✦</span>
+      <span class="brand-text">For Anu 🤍</span>
+    </div>
+
+    <button class="music-toggle-btn" id="music-toggle" aria-label="Toggle Soundtrack">
+      <div class="soundwave-bars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="music-label">Sahiba 🤍</span>
+    </button>
+  </header>
+
+  <!-- Main Walk-Through Experience -->
+  <main id="experience-container">
+
+    <!-- ====================================================================
+         SCENE 01 — CUTE MILK & MOCHA DIGITAL BIRTHDAY GIFT (PINTEREST STYLE)
+         ==================================================================== -->
+    <section class="story-scene active" id="scene-01">
+      <div class="scene-content" style="max-width: 660px;">
+        <div class="cute-bday-card anim-fade-blur">
+          
+          <div class="cute-card-header">
+            <h1 class="cute-hbd-badge">
+              <span class="sparkle">✨</span>
+              Happy Birthday, Anu
+              <span class="sparkle">✨</span>
+            </h1>
+          </div>
+
+          <!-- Cute Milk & Mocha "I am ur gift" Illustration -->
+          <div class="cute-illustration-wrap">
+            <img src="assets/icons/cute_bday_start.jpg" alt="Happy Birthday Anu - I am ur gift">
+          </div>
+
+          <!-- Cute Floating Heart Button -->
+          <div class="cute-btn-row">
+            <button class="cute-click-me-btn" id="btn-start-surprise">
+              <span>CLICK ME</span>
+              <span>🤍</span>
+            </button>
+          </div>
+
+          <div class="cute-card-footer">
+            <p class="cute-whisper">Suno Anu... Yeh chhota sa surprise tumhare liye hai 🤍</p>
+            <span class="cute-sound-tag">🎵 Sound on karke tap karna (Sahiba 🤍)</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 02 — THE OPENING (HINGLISH TYPEWRITER)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-02">
+      <div class="scene-content">
+        <div class="glowing-orb"></div>
+        <div class="typewriter-box">
+          <h2 class="typewriter-text" id="typewriter-target"></h2>
+        </div>
+
+        <div class="her-name-reveal" id="her-name-container">
+          <div class="birthday-announcement">Happy Birthday</div>
+          <h1 class="her-name-display her-name-text">Anu</h1>
+        </div>
+
+        <button class="btn-next-scene" id="btn-scene-02-next">
+          <span>Aage Dekho</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 03 — "IF I WERE THERE" (NO CITIES / NO KM)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-03">
+      <div class="scene-content">
+        <div class="scene-tag">Connected By Heart ✦</div>
+        <h2 class="scene-heading">Agar aaj main wahan hota na...</h2>
+
+        <div class="distance-map-container">
+          <!-- SVG Connecting Constellation -->
+          <svg class="map-svg-canvas" viewBox="0 0 500 160" preserveAspectRatio="none">
+            <path id="map-connection-line" d="M 60,80 Q 250,15 440,80" fill="none" stroke="rgba(233, 207, 168, 0.7)" stroke-width="2" stroke-dasharray="6 6"/>
+          </svg>
+
+          <!-- Node 1: Me -->
+          <div class="location-node">
+            <div class="pulsing-star"></div>
+            <div class="location-label">Me ✦</div>
+          </div>
+
+          <!-- Connected Heart Badge -->
+          <div class="distance-badge">Connected by heart ✦</div>
+
+          <!-- Node 2: Anu -->
+          <div class="location-node">
+            <div class="pulsing-star"></div>
+            <div class="location-label"><span class="her-name-text">Anu</span> ✦</div>
+          </div>
+        </div>
+
+        <div class="distance-prose-card anim-fade-in">
+          <p>Pehle toh thoda sa tang karta tumhe.</p>
+          <p>Phir tumhari woh pyari si smile laata jab tak tum has na pado.</p>
+          <p>Aur phir act karta jaise maine yeh sab plan karne mein koi mehnat hi nahi ki.</p>
+          <p>Lekin kyunki aaj saamne nahi aa sakta...<br>Toh apna ek chhota sa hissa tumhare paas bhej raha hoon. 🤍</p>
+        </div>
+
+        <button class="btn-next-scene">
+          <span>Yaadein Dekho</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 04 — MEMORIES HUNG ON THE ROPE (ROUND ZIGZAG)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-04">
+      <div class="scene-content" style="max-width: 920px;">
+        <div class="scene-tag">Yaadon Ki Dori</div>
+        <h2 class="scene-heading">Tumhari Har Ek Jhalak</h2>
+        <p class="scene-subtitle">
+          Roshni aur yaadon ki dori mein piroyi hui tumhari pyari si tasveerein...
+        </p>
+
+        <!-- Detailed Winding Rope & Clothespin Zigzag Container -->
+        <div class="rope-memories-wrapper" id="rope-memories-wrapper">
+          <!-- Continuous SVG Curved Rope -->
+          <svg class="rope-svg-canvas" id="rope-svg-canvas">
+            <path id="rope-svg-path" d="" />
+          </svg>
+
+          <!-- Glowing Fairy Light Bulbs along the rope -->
+          <div class="rope-fairy-lights" id="rope-fairy-lights"></div>
+
+          <!-- Pure Photos Alternating Left & Right Hung With Wooden Pins -->
+          <div class="rope-photos-container" id="rope-photos-container">
+            <!-- Rendered dynamically by js/memories.js -->
+          </div>
+        </div>
+
+        <button class="btn-next-scene" style="margin-top: 56px;">
+          <span>Dil Ki Baatein</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 05 — UNSPOKEN THOUGHTS (4 ENVELOPES WITH HER PHOTOS)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-05">
+      <div class="scene-content">
+        <div class="scene-tag">Unspoken Thoughts ✉</div>
+        <h2 class="scene-heading">Kuch Baatein Jo Main Kabhi Keh Nahi Paata</h2>
+        <p class="scene-subtitle">
+          Yeh 4 baatein dil mein hamesha rehti hain... in envelopes ko tap karke dekho.
+        </p>
+
+        <!-- Interactive Envelopes Grid -->
+        <div class="envelopes-grid" id="envelopes-grid">
+          <!-- Rendered dynamically by js/main.js with photo thumbnails -->
+        </div>
+
+        <button class="btn-next-scene">
+          <span>Jo Cheezein Tumhe Khas Banati Hain</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 07 — "REASONS YOU ARE SPECIAL" (THE LITTLE QUIRKS)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-07">
+      <div class="scene-content">
+        <div class="scene-tag">The Little Quirks</div>
+        <h2 class="scene-heading">Jo Cheezein Tumhe... <em>Anu</em> Banati Hain</h2>
+        <p class="scene-subtitle">
+          Inme se kisi bhi word par tap karo. Ek bhi baat badha-chadha kar nahi likhi.
+        </p>
+
+        <div class="floating-reasons-cloud" id="reasons-cloud">
+          <!-- Rendered dynamically by js/main.js -->
+        </div>
+
+        <button class="btn-next-scene">
+          <span>Aasmaan Dekho</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 08 — THE SAME MOON 🌙
+         ==================================================================== -->
+    <section class="story-scene" id="scene-08">
+      <div class="scene-content">
+        <div class="moon-scene-container">
+          <div class="realistic-moon"></div>
+          <div class="moon-prose-stream">
+            <p>Abhi humare beech thoda sa faasla hai...</p>
+            <p>Alag kamre. Alag raaste.</p>
+            <p>Alag aasmaan.</p>
+            <p><strong>Lekin chaand wahi ek hai.</strong></p>
+            <em>Toh aaj raat, jab bhi aasmaan dekho... yaad rakhna, main bhi yahin se usi chaand ko dekh raha hoon. 🌙</em>
+          </div>
+        </div>
+
+        <button class="btn-next-scene">
+          <span>Tumhara Khas Pal</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 09 — BIRTHDAY COUNTDOWN / MIDNIGHT MOMENT
+         ==================================================================== -->
+    <section class="story-scene" id="scene-09">
+      <div class="scene-content">
+        <div class="scene-tag">The Special Hour</div>
+
+        <!-- Live Countdown -->
+        <div id="countdown-clock" class="countdown-clock">
+          <div class="clock-unit">
+            <span class="unit-value" id="count-days">00</span>
+            <span class="unit-label">Din</span>
+          </div>
+          <div class="clock-unit">
+            <span class="unit-value" id="count-hours">00</span>
+            <span class="unit-label">Ghante</span>
+          </div>
+          <div class="clock-unit">
+            <span class="unit-value" id="count-minutes">00</span>
+            <span class="unit-label">Minute</span>
+          </div>
+          <div class="clock-unit">
+            <span class="unit-value" id="count-seconds">00</span>
+            <span class="unit-label">Second</span>
+          </div>
+        </div>
+
+        <!-- Midnight Celebration Banner -->
+        <div id="celebration-banner" class="celebration-banner">
+          <div class="celebration-sparkle">✨</div>
+          <div class="scene-tag">Aakhirkar Yeh Din Aa Hi Gaya</div>
+          <h2 class="scene-heading">Happy Birthday, <span class="her-name-text">Anu</span>!</h2>
+          <p class="scene-subtitle">
+            Yeh poora din sirf aur sirf tumhara hai. Ek pyari si wish maango... tum duniya ki har khushi deserve karti ho. 🤍
+          </p>
+        </div>
+
+        <!-- Toggle Preview Button for testing -->
+        <button class="btn-cinematic" id="toggle-mode-btn" style="margin-top: 16px; font-size: 0.8rem; padding: 10px 20px;">
+          Preview Midnight Celebration ✨
+        </button>
+
+        <button class="btn-next-scene">
+          <span>Khat Padho</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 10 — THE MAIN BIRTHDAY LETTER (HINGLISH)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-10">
+      <div class="scene-content">
+        <div class="scene-tag">Dil Se Nikla Khat</div>
+
+        <div class="parchment-letter-wrapper anim-fade-blur">
+          <div class="letter-wax-seal">🤍</div>
+
+          <div class="letter-salutation" id="letter-salutation-text">
+            Dearest Anu,
+          </div>
+
+          <div id="letter-paragraphs-container">
+            <!-- Rendered dynamically by js/main.js -->
+          </div>
+
+          <div class="letter-signature-box">
+            <div class="letter-closing" id="letter-closing-text">Hamesha,</div>
+            <div class="letter-sign-name" id="letter-signature-text">With all my love</div>
+          </div>
+        </div>
+
+        <button class="btn-next-scene">
+          <span>Ruko... Ek Cheez Aur</span>
+          <span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 11 — "ONE LAST THING" (SECRET TAP)
+         ==================================================================== -->
+    <section class="story-scene" id="scene-11">
+      <div class="scene-content">
+        <div class="surprise-secret-box">
+          <div class="scene-tag">Ek Aakhiri Baat</div>
+          <h2 class="scene-heading">Ruko... main kuch bhool gaya.</h2>
+          <p class="scene-subtitle">
+            Jaane se pehle, bas ek aakhiri cheez baaki hai.
+          </p>
+
+          <button class="btn-secret-tap" id="btn-secret-tap" aria-label="Tap for surprise">
+            🤍
+          </button>
+
+          <div class="final-burst-message" id="final-burst-message">
+            <h2 class="scene-heading" style="font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--accent-gold);">
+              You deserve the happiest birthday, Anu.
+            </h2>
+            <p class="scene-subtitle" style="margin: 0 auto 30px;">
+              Aur dua hai ki yeh saal tumhe hasne ki itni wajah de jitni tum count bhi na kar sako. 🤍
+            </p>
+          </div>
+
+          <button class="btn-cinematic" id="btn-scene-11-next" style="display: none; margin-top: 24px;">
+            <span>Aakhiri Paigaam</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCENE 12 — FINAL KEEPSAKE SCREEN
+         ==================================================================== -->
+    <section class="story-scene" id="scene-12">
+      <div class="scene-content">
+        <div class="scene-tag">Hamesha Ke Liye</div>
+
+        <div class="final-quote">
+          “Kuch log zindagi mein blessing banke aate hain...<br>tum meri sabse pyari blessing ho.”
+        </div>
+
+        <div class="final-meta">
+          — <span class="your-name-text">With all my love</span><br>
+          <span style="opacity: 0.85; font-size: 0.85rem; margin-top: 8px; display: inline-block;">
+            Made with all my heart, just for you, Anu 🤍
+          </span>
+        </div>
+
+        <div class="final-actions">
+          <button class="btn-cinematic" id="btn-replay">
+            <span>Phir Se Dekho</span>
+            <span>↻</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- High-Res Photo Lightbox Modal -->
+  <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <button class="lightbox-nav-btn lightbox-prev-btn" id="lightbox-prev" aria-label="Previous Photo">&#8249;</button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-img" src="" alt="Anu">
+      </div>
+      <button class="lightbox-nav-btn lightbox-next-btn" id="lightbox-next" aria-label="Next Photo">&#8250;</button>
+      <div class="lightbox-counter" id="lightbox-counter">1 / 24</div>
+    </div>
+  </div>
+
+  <!-- Global Modal for Envelopes (with photo) & Reasons -->
+  <div class="modal-overlay" id="global-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header-tag" id="modal-tag">Dil Ki Baat</div>
+      <h3 class="modal-title" id="modal-title">Title</h3>
+      <div class="modal-body" id="modal-body">
+        Message content
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cinematic" id="modal-action-btn" style="padding: 10px 26px; font-size: 0.88rem;">
+          <span>Read Next</span> <span class="arrow">&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js?v=20261001_v3"></script>
+  <script src="js/animations.js?v=20261001_v3"></script>
+  <script src="js/music.js?v=20261001_v3"></script>
+  <script src="js/memories.js?v=20261001_v3"></script>
+  <script src="js/countdown.js?v=20261001_v3"></script>
+  <script src="js/main.js?v=20261001_v3"></script>
+</body>
+</html>
